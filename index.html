@@ -737,14 +737,14 @@
     <script>
 
         const CATS = ['Shirt', 'Dress', 'Trousers', 'Skirt', 'Accessories', 'Blazer', 'Batik'];
-        const ICONS = { Shirt: '👕', Dress: '👗', Trousers: '👖', Skirt: '🩱', Accessories: '👜', Blazer: '🧥', Batik: '🌺' };
-        const PER_PAGE = 10;
+        const ICONS = { Shirt: '', Dress: '', Trousers: '', Skirt: '', Accessories: '', Blazer: '', Batik: '' };
+        const PER_PAGE = 12;
 
         const products = [
             { id: 1, name: 'Bronze Silk Shirt', cat: 'Shirt', price: 'Rp 19.000', av: true, shoulder: '35-37 cm', sleeve: '42-44 cm', waist: '73-75 cm', length: '53-55 cm', images: ['assets/S001_1.JPEG', 'assets/S001_2.JPEG', ''] },
             { id: 2, name: 'Emerald Green Silk Shirt', cat: 'Shirt', price: 'Rp 89.000', av: true, shoulder: '43-45 cm', sleeve: '57-59 cm', waist: '87-89 cm', length: '68-70 cm', images: ['assets/S002_1.JPEG', 'assets/S002_2.JPEG', ''] },
-            { id: 3, name: 'Soft Lemon Silk Shirt', cat: 'Shirt', price: 'Rp 119.000', av: true, shoulder: '41-43 cm', sleeve: '56-58 cm', waist: '84-86 cm', length: '75-77 cm', images: ['assets/S003_1.JPEG', 'assets/S003_2.JPEG', ''] },
-            { id: 4, name: 'Canary Yellow Silk Shirt', cat: 'Shirt', price: 'Rp 119.000', av: true, shoulder: '41-43 cm', sleeve: '56-58 cm', waist: '84-86 cm', length: '75-77 cm', images: ['assets/S004_1.JPEG', 'assets/S004_2.JPEG', ''] },
+            { id: 3, name: 'Soft Lemon Zara Shirt', cat: 'Shirt', price: 'Rp 119.000', av: true, shoulder: '41-43 cm', sleeve: '56-58 cm', waist: '84-86 cm', length: '75-77 cm', images: ['assets/S003_1.JPEG', 'assets/S003_2.JPEG', ''] },
+            { id: 4, name: 'Canary Yellow Zara Shirt', cat: 'Shirt', price: 'Rp 119.000', av: true, shoulder: '41-43 cm', sleeve: '56-58 cm', waist: '84-86 cm', length: '75-77 cm', images: ['assets/S004_1.JPEG', 'assets/S004_2.JPEG', ''] },
             { id: 5, name: 'Blue Floral Silk Shirt', cat: 'Shirt', price: 'Rp 89.000', av: true, shoulder: '48-50 cm', sleeve: '53-55 cm', waist: '85-87 cm', length: '69-71 cm', images: ['assets/S005_1.JPEG', 'assets/S005_2.JPEG', ''] },
             { id: 6, name: 'Pink Floral Silk Shirt', cat: 'Shirt', price: 'Rp 89.000', av: true, shoulder: '48-50 cm', sleeve: '53-55 cm', waist: '85-87 cm', length: '69-71 cm', images: ['assets/S006_1.JPEG', 'assets/S006_2.JPEG', ''] },
             { id: 7, name: 'Patchwork Silk Shirt', cat: 'Shirt', price: 'Rp 89.000', av: true, shoulder: '48-50 cm', sleeve: '53-55 cm', waist: '85-87 cm', length: '69-71 cm', images: ['assets/S007_1.JPEG', 'assets/S007_2.JPEG', ''] },
@@ -762,6 +762,25 @@
             { id: 19, name: 'Shanghai Deep Teal Crepe Shirt', cat: 'Shirt', price: 'Rp 59.000', av: true, shoulder: '45-47 cm', sleeve: '9-11 cm', waist: '79-81 cm', length: '64-66 cm', images: ['assets/S019_1.JPEG', 'assets/S019_2.JPEG', ''] },
             { id: 20, name: 'Croptop Pink Linen Shirt', cat: 'Shirt', price: 'Rp 49.000', av: true, shoulder: '41-43 cm', sleeve: '33-35 cm', waist: '71-73 cm', length: '33-35 cm', images: ['assets/S020_1.JPEG', 'assets/S020_2.JPEG', ''] },
             { id: 21, name: 'Croptop Royal Blue Linen Shirt', cat: 'Shirt', price: 'Rp 49.000', av: true, shoulder: '41-43 cm', sleeve: '33-35 cm', waist: '71-73 cm', length: '33-35 cm', images: ['assets/S021_1.JPEG', 'assets/S021_2.JPEG', ''] },
+            { id: 22, name: 'Broken White Culottes', cat: 'Trousers', price: 'Rp 49.000', av: true, waist: '79-82 cm', hip: '51-53 cm', leg: '51-53 cm', length: '103-105 cm', images: ['assets/T01_1.JPEG', 'assets/T01_2.JPEG', ''] },
+            { id: 23, name: 'Beige Culottes', cat: 'Trousers', price: 'Rp 49.000', av: true, waist: '79-82 cm', hip: '51-53 cm', leg: '51-53 cm', length: '103-105 cm', images: ['assets/T02_1.JPEG', 'assets/T02_2.JPEG', ''] },
+            { id: 26, name: 'Terracota Culottes', cat: 'Trousers', price: 'Rp 49.000', av: true, waist: '79-82 cm', hip: '51-53 cm', leg: '51-53 cm', length: '103-105 cm', images: ['assets/T05_1.JPEG', 'assets/T05_2.JPEG', ''] },
+            { id: 27, name: 'Maroon Straight Slim Fit', cat: 'Trousers', price: 'Rp 45.000', av: true, waist: '71-73 cm', hip: '47-49 cm', leg: '25-27 cm', length: '92-94 cm', images: ['assets/T06_1.JPEG', 'assets/T06_2.JPEG', ''] },
+            { id: 28, name: 'Light Blue Grey Straight Slim Fit', cat: 'Trousers', price: 'Rp 59.000', av: true, waist: '83-85 cm', hip: '59-61 cm', leg: '33-35 cm', length: '89-91 cm', images: ['assets/T07_1.JPEG', 'assets/T07_2.JPEG', ''] },
+            { id: 29, name: 'Old Gold Culottes', cat: 'Trousers', price: 'Rp 49.000', av: true, waist: '66-68 cm', hip: '56-58 cm', leg: '47-49 cm', length: '107-109 cm', images: ['assets/T08_1.JPEG', 'assets/T08_2.JPEG', ''] },
+            { id: 30, name: 'Maroon Culottes', cat: 'Trousers', price: 'Rp 49.000', av: true, waist: '66-68 cm', hip: '56-58 cm', leg: '47-49 cm', length: '107-109 cm', images: ['assets/T09_1.JPEG', 'assets/T09_2.JPEG', ''] },
+            { id: 31, name: 'Emerald Green Culottes', cat: 'Trousers', price: 'Rp 49.000', av: true, waist: '69-71 cm', hip: '59-61 cm', leg: '51-53 cm', length: '107-109 cm', images: ['assets/T10_1.JPEG', 'assets/T10_2.JPEG', ''] },
+            { id: 32, name: 'Mint Green Formal Culottes', cat: 'Trousers', price: 'Rp 55.000', av: true, waist: '85-87 cm', hip: '65-67 cm', leg: '45-47 cm', length: '102-104 cm', images: ['assets/T11_1.JPEG', 'assets/T11_2.JPEG', ''] },
+            { id: 33, name: 'Pink Tapered', cat: 'Trousers', price: 'Rp 45.000', av: true, waist: '80-82 cm', hip: '61-63 cm', leg: '31-33 cm', length: '87-89 cm', images: ['assets/T12_1.JPEG', 'assets/T12_2.JPEG', ''] },
+            { id: 34, name: 'Baby Blue Straight Slim Fit', cat: 'Trousers', price: 'Rp 59.000', av: true, waist: '76-78 cm', hip: '64-66 cm', leg: '33-35 cm', length: '91-93 cm', images: ['assets/T13_1.JPEG', 'assets/T13_2.JPEG', ''] },
+            { id: 35, name: 'Light Blue Grey Straight Slim Fit', cat: 'Trousers', price: 'Rp 45.000', av: true, waist: '81-83 cm', hip: '62-64 cm', leg: '31-33 cm', length: '91-93 cm', images: ['assets/T14_1.JPEG', 'assets/T14_2.JPEG', ''] },
+            { id: 36, name: 'Red Formal Culottes', cat: 'Trousers', price: 'Rp 59.000', av: true, waist: '71-73 cm', hip: '59-61 cm', leg: '51-53 cm', length: '105-107 cm', images: ['assets/T15_1.JPEG', 'assets/T15_2.JPEG', ''] },
+            { id: 37, name: 'Maroon Culottes', cat: 'Trousers', price: 'Rp 49.000', av: true, waist: '73-75 cm', hip: '54-56 cm', leg: '47-49 cm', length: '105-107 cm', images: ['assets/T16_1.JPEG', 'assets/T16_2.JPEG', ''] },
+            { id: 38, name: 'Forest Green Culottes', cat: 'Trousers', price: 'Rp 49.000', av: true, waist: '83-85 cm', hip: '59-61 cm', leg: '35-37 cm', length: '92-94 cm', images: ['assets/T17_1.JPEG', 'assets/T17_2.JPEG', ''] },
+            { id: 39, name: 'Maroon Culottes', cat: 'Trousers', price: 'Rp 49.000', av: true, waist: '83-85 cm', hip: '59-61 cm', leg: '35-37 cm', length: '92-94 cm', images: ['assets/T18_1.JPEG', 'assets/T18_2.JPEG', ''] },
+            { id: 40, name: 'Emerald Green Silk Culottes', cat: 'Trousers', price: 'Rp 50.000', av: true, waist: '72-74 cm', hip: '59-61 cm', leg: '55-57 cm', length: '98-100 cm', images: ['assets/T19_1.JPEG', 'assets/T19_2.JPEG', ''] },
+            { id: 41, name: 'Red Skirts', cat: 'Skirt', price: 'Rp 49.000', av: true, waist: '74-76 cm', hip: '-', leg: '-', length: '54-56 cm', images: ['assets/T20_1.JPEG', 'assets/T20_2.JPEG', ''] },
+            { id: 42, name: 'Dark Green Skirts', cat: 'Skirt', price: 'Rp 49.000', av: true, waist: '74-76 cm', hip: '-', leg: '-', length: '54-56 cm', images: ['assets/T21_1.JPEG', 'assets/T21_2.JPEG', ''] },
         ];
 
         // Change index 0 to any other to feature a different product
@@ -834,7 +853,7 @@
                 imgZ = '<div class="card-imgwrap"><div class="card-slides" id="' + uid + '-s"><div class="card-placeholder">' + ICONS[p.cat] + '</div></div>'
                     + '<div class="cpill-wrap"><span class="' + (p.av ? 's-pill-av' : 's-pill-so') + '">' + (p.av ? 'Available' : 'Sold Out') + '</span></div></div>';
             }
-            const mf = [['Bust', p.bust], ['Waist', p.waist], ['Shoulder', p.shoulder], ['Sleeve', p.sleeve], ['Length', p.length]]
+            const mf = [['Bust', p.bust], ['Waist', p.waist], ['Shoulder', p.shoulder], ['Sleeve', p.sleeve], ['Length', p.length], ['Hip', p.hip], ['Leg Opening', p.leg]]
                 .filter(([, v]) => v && v !== '—').slice(0, 4)
                 .map(([l, v]) => '<div><span class="pm-l">' + l + '</span><span class="pm-v">' + v + '</span></div>').join('');
             return '<div class="pcard">' + imgZ + '<div class="pbody"><div class="p-cat">' + p.cat + '</div>'
