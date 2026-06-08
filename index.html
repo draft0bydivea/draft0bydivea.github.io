@@ -852,9 +852,13 @@
         }
 
         // ── PRODUCT CARD ──────────────────────────────────────────────────────────
-        function pCard(p) {
+        function pCardHome(p) {
+            return pCard(p, 'h');
+        }
+
+        function pCard(p, uidPrefix) {
             const ri = realImgs(p.images);
-            const uid = 'p' + p.id;
+            const uid = (uidPrefix || '') + 'p' + p.id;
             CS[uid] = 0;
             let imgZ;
             if (ri.length) {
@@ -893,8 +897,14 @@
 
         // ── RENDER HOME GRID (6 previews) ─────────────────────────────────────────
         function renderHomeGrid() {
-            const pv = products.filter(p => p.id !== hookProduct.id).slice(0, 6);
-            document.getElementById('home-grid').innerHTML = pv.map(pCard).join('');
+            // Shuffle products (excluding hookProduct) and pick 6 randomly
+            const pool = products.filter(p => p.id !== hookProduct.id);
+            for (let i = pool.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                const tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
+            }
+            const pv = pool.slice(0, 6);
+            document.getElementById('home-grid').innerHTML = pv.map(function (p) { return pCardHome(p); }).join('');
         }
 
         // ── CATEGORY TILES ────────────────────────────────────────────────────────
